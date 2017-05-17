@@ -8,6 +8,10 @@ import (
   "golang.org/x/crypto/nacl/box"
   "golang.org/x/crypto/nacl/secretbox"
 )
+// inspired from the following two sites:
+// https://austburn.me/posts/creating_a_secure_server_in_golang
+// https://github.com/andmarios/golang-nacl-secretbox
+
 func main(){
 	AESKey_32Bytes := make([]byte, 32)
 	_, err := rand.Read(AESKey_32Bytes)
